@@ -4,8 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-class BestAttachmentSetList extends StatefulWidget {
-  const BestAttachmentSetList(
+class BestAttachmentSetList1 extends StatefulWidget {
+  const BestAttachmentSetList1(
       {Key key,
       this.mainScreenAnimationController,
       this.mainScreenAnimation,
@@ -23,7 +23,7 @@ class BestAttachmentSetList extends StatefulWidget {
   _BestAttachmentSetListState createState() => _BestAttachmentSetListState();
 }
 
-class _BestAttachmentSetListState extends State<BestAttachmentSetList>
+class _BestAttachmentSetListState extends State<BestAttachmentSetList1>
     with TickerProviderStateMixin {
   AnimationController animationController;
 
@@ -69,10 +69,11 @@ class _BestAttachmentSetListState extends State<BestAttachmentSetList>
                       AppTheme.animationOption(animationController);
                   animationController.forward();
                   return BestAttachmentSet(
-                      data: widget.data[index],
-                      animation: animation,
-                      animationController: animationController,
-                      width: widget.width);
+                    data: widget.data[index],
+                    animation: animation,
+                    animationController: animationController,
+                    width: widget.width,
+                  );
                 },
               ),
             ),
@@ -122,7 +123,7 @@ class BestAttachmentSet extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              data.key.toUpperCase(),
+                              data.key.toLowerCase(),
                               textAlign: TextAlign.center,
                               style: AppTheme.textStyleSmallWhite,
                             ),
@@ -130,7 +131,7 @@ class BestAttachmentSet extends StatelessWidget {
                               height: 8,
                             ),
                             Text(
-                              data.value,
+                              data.value.toLowerCase(),
                               textAlign: TextAlign.center,
                               style: AppTheme.textStyleExtraSmallWhite,
                             ),
@@ -165,7 +166,6 @@ class BestAttachmentSet extends StatelessWidget {
                                     value: downloadProgress.progress),
                         errorWidget: (context, url, error) => Icon(Icons.error),
                       ),
-                      // child: Image.network(data.src),
                     ),
                   )
                 ],
