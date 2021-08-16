@@ -17,9 +17,5 @@ class Config {
 
   static String get aboutus => 'pubg/aboutus';
 
-  static String get dropdownWeapons => 'pubg/dropdownWeapons';
-
   static String get mapDetails => 'pubg/map-details';
-
-  static String get weapons => 'pubg/weapons';
 }

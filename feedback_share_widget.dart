@@ -1,7 +1,7 @@
-import 'package:ProGuidance/utils/common_widget/common_widget.dart';
-import 'package:ProGuidance/utils/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:launch_review/launch_review.dart';
+import 'package:niralakam_widget/widget/common_widget/common_widget.dart';
+import 'package:proguidancelayout/utils/app_theme.dart';
 import 'package:share/share.dart';
 
 class FeedBackAndShareWidget {
@@ -15,7 +15,7 @@ class FeedBackAndShareWidget {
               child: InkWell(
                   onTap: () {
                     LaunchReview.launch(
-                      androidAppId: "com.niralaakam.ProGuidance",
+                      androidAppId: "com.niralaakam.proguidancelayout",
                     );
                   },
                   child: CommonWidget.getIconWithText(
@@ -31,7 +31,7 @@ class FeedBackAndShareWidget {
               child: InkWell(
                 onTap: () {
                   Share.share(
-                      "Try this BATTLEGROUNDS MOBILE Guidance application https://play.google.com/store/apps/details?id=com.niralaakam.ProGuidance");
+                      "Try this Control Layout Guidance - BGMI application https://play.google.com/store/apps/details?id=com.niralaakam.proguidancelayout");
                 },
                 child: CommonWidget.getIconWithText(
                     Icons.share,

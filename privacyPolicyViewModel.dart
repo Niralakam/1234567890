@@ -1,12 +1,12 @@
-import 'package:ProGuidance/common_utilities/feedback_share_widget.dart';
-import 'package:ProGuidance/utils/common_widget/common_widget.dart';
-import 'package:ProGuidance/utils/title_widget/title_widget.dart';
-import 'package:ProGuidance/resources/constant.dart';
-import 'package:ProGuidance/utils/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_html/style.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:niralakam_widget/widget/common_widget/common_widget.dart';
+import 'package:niralakam_widget/widget/title_widget/title_widget.dart';
+import 'package:proguidancelayout/resources/constant.dart';
+import 'package:proguidancelayout/utils/app_theme.dart';
+import 'package:proguidancelayout/utils/feedback_share_widget/feedback_share_widget.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
 class PrivacyPolicyViewModel extends Cubit {
@@ -22,8 +22,10 @@ class PrivacyPolicyViewModel extends Cubit {
     },
   );
   int(width) async {
-    List<Widget> listViews =
-        CommonWidget.getCommonApplicationPrivacyData(width);
+    List<Widget> listViews = CommonWidget.getCommonApplicationPrivacyData(
+      width,
+      AppTheme.applicationtitle,
+    );
     listViews.add(
       Container(
         padding: EdgeInsets.only(

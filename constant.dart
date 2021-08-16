@@ -1,24 +1,17 @@
 class Constant {
   static int delay = 1;
-  static String version = 'Version 7.2.2';
-  static String title = 'BATTLEGROUNDS PUBG MOBILE Guidance';
-  static String mailId = "niralakam@gmail.com";
-  static String map = 'Map Details';
-  static String weapons = 'Weapons';
-  static String weaponComparison = 'Weapon Comparison';
-  static String circleShrink = 'Circle Shrink';
-  static String hitToKill = 'Hit To Kill';
-  static String screenLayouts = 'Control Layouts';
-  static String vehiclesLayouts = 'Vehicles';
-  static String deviceBasedSensitivity = 'RAM Sensitivity';
-  static String playerBasedSensitivity = 'Player Sensitivity';
+  static String version = 'Version 1.0.1';
+  static String title = 'Control Layout Guidance';
+  static String mailId = "niralakam@email.com";
+  static String screenLayouts1 = '2 Fingers Layouts';
+  static String screenLayouts2 = '3 Fingers Layouts';
+  static String screenLayouts3 = '4 Fingers Layouts';
   static String application = 'About';
   static String privacyPolicy = 'Privacy Policy';
-  static String consumables = 'Consumables';
   static double animationDuration = 700;
   static String htmlData = """
 
-<p><strong><span>Niralaakam&nbsp;</span></strong>built this BATTLEGROUNDS PUBG MOBILE Guidance application for <strong>PUBG</strong> Mobile. We provided by <strong><span>Niralaakam</span>&nbsp;</strong><strong>&nbsp;</strong>at no cost and is intended for use as is free.</p>
+<p><strong><span>Niralaakam&nbsp;</span></strong>built this Control Layout Guidance application for <strong>PUBG</strong> Mobile. We provided by <strong><span>Niralaakam</span>&nbsp;</strong><strong>&nbsp;</strong>at no cost and is intended for use as is free.</p>
 <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.</p>
 <p>If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.</p>
 <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Sensitivity for<span>&nbsp;<strong>PUBG&nbsp;</strong></span>Mobile unless otherwise defined in this Privacy Policy.</p>
@@ -55,7 +48,7 @@ class Constant {
 <p>I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.</p>
 <p><strong><span>Contact Us</span></strong></p>
 <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at &nbsp;</p>
-<p> <a href="mailto:niralakam@gmail.com">niralakam@gmail.com</a></p>
+<p> <a href="mailto:Ananth.g1992@gmail.com">Ananth.g1992@gmail.com</a></p>
 
 """;
 }

@@ -1,58 +1,45 @@
-import 'package:ProGuidance/resources/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   AppTheme._();
 
-  static Column applicationtitle = Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+  static InlineSpan rainDropAnimationTitle = TextSpan(
+    text: 'CONTORL',
+    style: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      color: AppTheme.white,
+    ),
     children: [
-      RichText(
-        textAlign: TextAlign.center,
-        text: TextSpan(
-          text: 'BATTLEGROUNDS P',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
-            color: AppTheme.primaryColor,
-          ),
-          children: [
-            TextSpan(
-              text: 'UB',
-              style: TextStyle(color: Colors.black, fontSize: 16),
-            ),
-            TextSpan(
-              text: 'G',
-              style: TextStyle(color: AppTheme.primaryColor, fontSize: 16),
-            ),
-            TextSpan(
-              text: ' MOBILE Guidance',
-              style: TextStyle(color: AppTheme.primaryColor, fontSize: 16),
-            ),
-          ],
-        ),
+      TextSpan(
+        text: ' LAYOUT ',
+        style: TextStyle(color: Colors.red, fontSize: 16),
       ),
-      Align(
-        alignment: Alignment.center,
-        child: Container(
-          padding: new EdgeInsets.only(right: 20),
-          child: RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              text: Constant.version,
-              style: TextStyle(
-                fontSize: 7,
-                fontWeight: FontWeight.w700,
-                color: AppTheme.primaryColor,
-              ),
-            ),
-          ),
-        ),
+      TextSpan(
+        text: 'GUIDANCE',
+        style: TextStyle(color: AppTheme.white, fontSize: 16),
       ),
     ],
   );
-
+  static InlineSpan applicationtitle = TextSpan(
+    text: 'Contol',
+    style: TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w700,
+      color: AppTheme.primaryColor,
+    ),
+    children: [
+      TextSpan(
+        text: ' Layout ',
+        style: TextStyle(color: Colors.red, fontSize: 18),
+      ),
+      TextSpan(
+        text: 'Guidance',
+        style: TextStyle(color: AppTheme.primaryColor, fontSize: 18),
+      ),
+    ],
+  );
   static int milliseconds = 700;
   static const double fontSizeDoubleExtraSmall = 10;
   static const double fontSizeExtraSmall = 10;
@@ -85,7 +72,7 @@ class AppTheme {
 
   static const double heightSpace = 4;
 
-  static Color primaryColor = HexColor('#00b4ab');
+  static Color primaryColor = HexColor('#2E4E5D');
   static Color darkprimaryColor = HexColor('#0090b4');
   static Color fontPrimaryColor = Colors.black;
   static Color fontSecondaryColor = Colors.white;

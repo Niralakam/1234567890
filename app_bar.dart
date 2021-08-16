@@ -1,4 +1,6 @@
-import 'package:ProGuidance/utils/app_theme.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:niralakam_widget/theme/niralakam-share-theme.dart';
+import 'package:proguidancelayout/utils/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:launch_review/launch_review.dart';
 import 'package:share/share.dart';
@@ -39,7 +41,7 @@ Widget appBar(String title, double size) {
                     ),
                     onTap: () {
                       LaunchReview.launch(
-                        androidAppId: "com.niralaakam.ProGuidance",
+                        androidAppId: "com.niralaakam.proguidancelayout",
                       );
                     },
                     child: Padding(
@@ -59,7 +61,7 @@ Widget appBar(String title, double size) {
                     ),
                     onTap: () {
                       Share.share(
-                          "Try this BATTLEGROUNDS MOBILE Guidance application https://play.google.com/store/apps/details?id=com.niralaakam.ProGuidance");
+                          "Try this Control Layout application https://play.google.com/store/apps/details?id=com.niralaakam.proguidancelayout");
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -74,6 +76,93 @@ Widget appBar(String title, double size) {
             ),
           ),
         ],
+      ),
+    ),
+  );
+}
+
+Widget content(String value, TextStyle style) {
+  return Container(
+    child: Row(
+      children: <Widget>[
+        Expanded(
+          child: Container(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: NiralakamSharedTheme.paddingDoubleExtraLarge,
+                right: NiralakamSharedTheme.paddingDoubleExtraLarge,
+                bottom: NiralakamSharedTheme.paddingSmall,
+              ),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Text(
+                      value,
+                      textAlign: TextAlign.left,
+                      style: style,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget customImage(String value) {
+  return Container(
+    padding: NiralakamSharedTheme.edgeInsetsPaddingDoubleExtraLargeLTRB,
+    child: ClipRRect(
+      borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+      child: Stack(
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              AspectRatio(
+                aspectRatio: 2,
+                child: CachedNetworkImage(
+                  imageUrl: value,
+                  fit: BoxFit.fill,
+                  progressIndicatorBuilder: (context, url, downloadProgress) =>
+                      CircularProgressIndicator(
+                          value: downloadProgress.progress),
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    ),
+  );
+}
+
+Widget paragraph(String value, TextStyle style) {
+  return Padding(
+    padding: NiralakamSharedTheme.edgeInsetsPaddingDoubleExtraLargeLR,
+    child: Container(
+      decoration: NiralakamSharedTheme.decoration,
+      child: Padding(
+        padding: NiralakamSharedTheme.edgeInsetsPaddingDoubleExtraLargeLTRB,
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    value,
+                    style: NiralakamSharedTheme.subContentHeader,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     ),
   );
